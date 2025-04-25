@@ -2,35 +2,17 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Begin</title>
+  <script>
+    setTimeout(function() {
+      document.getElementById("frame").src = "https://niranjan164.github.io/Introduction/a.htm";
+    }, 35000); // 35 seconds = 35000 milliseconds
+  </script>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background: black;
       height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #beginBtn {
-      padding: 20px 50px;
-      font-size: 28px;
-      cursor: pointer;
-      background-color: green;
-      color: red;
-      border: none;
-      border-radius: 10px;
-      font-weight: bold;
-      box-shadow: 0 0 15px lime;
-    }
-    #mainContent {
-      display: none;
-      height: 100%;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
+      overflow: hidden;
     }
     iframe {
       width: 100%;
@@ -40,29 +22,6 @@
   </style>
 </head>
 <body>
-  <button id="beginBtn">BEGIN</button>
-
-  <div id="mainContent">
-    <audio id="bgm" autoplay>
-      <source src="https://raw.githubusercontent.com/Niranjan164/k/main/animal_bgm_103522.mp3" type="audio/mpeg">
-    </audio>
-    <iframe id="frame" src="https://niranjan164.github.io/Introduction/web_holder.html"></iframe>
-  </div>
-
-  <script>
-    document.getElementById("beginBtn").addEventListener("click", function() {
-      document.getElementById("beginBtn").style.display = "none";
-      document.getElementById("mainContent").style.display = "block";
-
-      const bgm = document.getElementById("bgm");
-      bgm.play().catch(() => {
-        console.log("Audio play blocked by browser.");
-      });
-
-      setTimeout(function() {
-        document.getElementById("frame").src = "https://niranjan164.github.io/Introduction/a.htm";
-      }, 35000); // 35 seconds
-    });
-  </script>
+  <iframe id="frame" src="https://niranjan164.github.io/Introduction/web_holder.html"></iframe>
 </body>
 </html>
